@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import TextInput from "./components/TextInput";
-import initialState from "./data";
 import { Route } from "react-router";
+import initialState from "./data";
+import TextInput from "./components/TextInput";
+import DatePicker from "react-date-picker";
 
 function App() {
   const [scene, setScene] = useState(0);
@@ -9,6 +10,10 @@ function App() {
 
   const changeHandler = (e) => {
     setState({ ...state, value: e.target.value });
+  };
+
+  const dateHandler = (value) => {
+    setState({ ...state, value: value });
   };
 
   const submitHandler = (e) => {
@@ -25,8 +30,18 @@ function App() {
           name={state.name}
           value={state.value}
           changeHandler={changeHandler}
-          placeholder={"enter event name..."}
+          placeholder={`enter event ${state.name}...`}
         />
+      </Route>
+      <Route path='/enter-date'>
+        <label htmlFor={state.name}>
+          enter event date...
+          <DatePicker
+            name={state.name}
+            value={state.value}
+            onChange={dateHandler}
+          />
+        </label>
       </Route>
       <button type='submit' onClick={submitHandler}>
         next
