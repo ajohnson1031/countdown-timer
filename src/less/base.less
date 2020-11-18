@@ -1,0 +1,89 @@
+body,
+html {
+  font-family: "Roboto Slab", sans-serif;
+
+  div#root {
+    height: 50vh;
+    width: 100vw;
+  }
+  div.App {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-top: 50px;
+    }
+    input.main-input-text {
+      font-family: "Roboto Slab", sans-serif;
+      font-size: 3rem;
+      padding: 3px 20px;
+      margin-right: 15px;
+      border: none;
+      background-color: lighten(silver, 18%);
+      border-radius: 8px;
+      color: darken(silver, 30%);
+
+      &::-ms-input-placeholder {
+        color: silver;
+      }
+
+      &::placeholder {
+        color: silver;
+      }
+    }
+
+    label {
+      font-size: 3rem;
+      color: silver;
+    }
+
+    .react-date-picker {
+      margin: 0 15px;
+      height: 100%;
+
+      .react-date-picker__wrapper {
+        padding: 3px 10px;
+        background-color: lighten(silver, 18%);
+        border: none;
+        border-radius: 8px;
+      }
+
+      .react-date-picker__inputGroup__input {
+        color: darken(silver, 40%);
+      }
+
+      .react-calendar__navigation {
+        margin-bottom: 0 !important;
+      }
+
+      .react-calendar__month-view__weekdays__weekday {
+        font-size: 0.75rem;
+        color: darken(silver, 40%);
+      }
+    }
+
+    button.next-button {
+      font-family: "Roboto Slab", sans-serif;
+      font-size: 2.5rem;
+      background-color: lighten(green, 10%);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      padding: 0 15px;
+      height: 100%;
+      line-height: 100%;
+      position: relative;
+      top: -4px;
+
+      &:hover {
+        background-color: lighten(green, 5%);
+      }
+    }
+  }
+}

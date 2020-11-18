@@ -1,0 +1,219 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-size: 62.5%;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+body,
+html {
+  font-family: "Roboto Slab", sans-serif;
+}
+body div#root,
+html div#root {
+  height: 50vh;
+  width: 100vw;
+}
+body div.App,
+html div.App {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+body div.App h1,
+html div.App h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 50px;
+}
+body div.App input.main-input-text,
+html div.App input.main-input-text {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 3rem;
+  padding: 3px 20px;
+  margin-right: 15px;
+  border: none;
+  background-color: #eeeeee;
+  border-radius: 8px;
+  color: #747474;
+}
+body div.App input.main-input-text::-ms-input-placeholder,
+html div.App input.main-input-text::-ms-input-placeholder {
+  color: silver;
+}
+body div.App input.main-input-text::placeholder,
+html div.App input.main-input-text::placeholder {
+  color: silver;
+}
+body div.App label,
+html div.App label {
+  font-size: 3rem;
+  color: silver;
+}
+body div.App .react-date-picker,
+html div.App .react-date-picker {
+  margin: 0 15px;
+  height: 100%;
+}
+body div.App .react-date-picker .react-date-picker__wrapper,
+html div.App .react-date-picker .react-date-picker__wrapper {
+  padding: 3px 10px;
+  background-color: #eeeeee;
+  border: none;
+  border-radius: 8px;
+}
+body div.App .react-date-picker .react-date-picker__inputGroup__input,
+html div.App .react-date-picker .react-date-picker__inputGroup__input {
+  color: #5a5a5a;
+}
+body div.App .react-date-picker .react-calendar__navigation,
+html div.App .react-date-picker .react-calendar__navigation {
+  margin-bottom: 0 !important;
+}
+body div.App .react-date-picker .react-calendar__month-view__weekdays__weekday,
+html div.App .react-date-picker .react-calendar__month-view__weekdays__weekday {
+  font-size: 0.75rem;
+  color: #5a5a5a;
+}
+body div.App button.next-button,
+html div.App button.next-button {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 2.5rem;
+  background-color: #00b300;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0 15px;
+  height: 100%;
+  line-height: 100%;
+  position: relative;
+  top: -4px;
+}
+body div.App button.next-button:hover,
+html div.App button.next-button:hover {
+  background-color: #009a00;
+}

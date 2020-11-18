@@ -25,27 +25,30 @@ function App() {
       <header>
         <h1>Countdown Timer</h1>
       </header>
-      <Route exact path='/'>
-        <TextInput
-          name={state.name}
-          value={state.value}
-          changeHandler={changeHandler}
-          placeholder={`enter event ${state.name}...`}
-        />
-      </Route>
-      <Route path='/enter-date'>
-        <label htmlFor={state.name}>
-          enter event date...
-          <DatePicker
+      <div className='container'>
+        <Route exact path='/'>
+          <TextInput
             name={state.name}
             value={state.value}
-            onChange={dateHandler}
+            changeHandler={changeHandler}
+            placeholder={`enter event ${state.name}...`}
           />
-        </label>
-      </Route>
-      <button type='submit' onClick={submitHandler}>
-        next
-      </button>
+        </Route>
+        <Route path='/enter-date'>
+          <label htmlFor={state.name} className='unlinked-label'>
+            enter event date...
+            <DatePicker
+              name={state.name}
+              value={state.value}
+              onChange={dateHandler}
+            />
+          </label>
+        </Route>
+
+        <button type='submit' onClick={submitHandler} className='next-button'>
+          next
+        </button>
+      </div>
     </div>
   );
 }
