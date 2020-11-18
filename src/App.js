@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TextInput from "./components/TextInput";
 import initialState from "./data";
+import { Route } from "react-router";
 
 function App() {
   const [scene, setScene] = useState(0);
@@ -19,12 +20,14 @@ function App() {
       <header>
         <h1>Countdown Timer</h1>
       </header>
-      <TextInput
-        name={state.name}
-        value={state.value}
-        changeHandler={changeHandler}
-        placeholder={"enter event name..."}
-      />
+      <Route exact path='/'>
+        <TextInput
+          name={state.name}
+          value={state.value}
+          changeHandler={changeHandler}
+          placeholder={"enter event name..."}
+        />
+      </Route>
       <button type='submit' onClick={submitHandler}>
         next
       </button>
