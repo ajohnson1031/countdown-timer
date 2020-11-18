@@ -4,24 +4,30 @@ import { useHistory } from "react-router-dom";
 import initialState from "./data";
 import TextInput from "./components/TextInput";
 import DatePicker from "react-date-picker";
+import TimePicker from "react-time-picker";
+import CountDown from "./components/CountDown";
 
 function App() {
   const [scene, setScene] = useState(0);
   const [state, setState] = useState(initialState[scene]);
+  const [errors, setErrors] = useState(null);
   let history = useHistory();
 
   const changeHandler = (e) => {
     let newState = { ...state, value: e.target.value };
     setState(newState);
+    setErrors(null);
   };
 
-  const dateHandler = (value) => {
+  const dateTimeHandler = (value) => {
     setState({ ...state, value: value });
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    if (scene < initialState.length - 1) {
+    if (scene === 0 && state.value === "") {
+      setErrors("you must enter an event name...");
+    } else if (scene < initialState.length - 1) {
       setScene(scene + 1);
     }
   };
@@ -51,15 +57,31 @@ function App() {
             <DatePicker
               name={state.name}
               value={state.value}
-              onChange={dateHandler}
+              onChange={dateTimeHandler}
             />
           </label>
         </Route>
+        <Route path='/enter-time'>
+          <label htmlFor={state.name} className='unlinked-label'>
+            enter event time...
+            <TimePicker
+              name={state.name}
+              value={state.value}
+              onChange={dateTimeHandler}
+            />
+          </label>
+        </Route>
+        <Route path='/final-countdown'>
+          <CountDown />
+        </Route>
 
-        <button type='submit' onClick={submitHandler} className='next-button'>
-          next
-        </button>
+        {scene <= initialState.length - 2 && (
+          <button type='submit' onClick={submitHandler} className='next-button'>
+            {state.buttonText}
+          </button>
+        )}
       </div>
+      {errors && <div className='errors'>{errors}</div>}
     </div>
   );
 }

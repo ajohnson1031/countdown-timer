@@ -11,13 +11,17 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 
     h1 {
       font-size: 2rem;
       font-weight: 600;
       margin-top: 50px;
     }
+
+    div.container {
+      margin: 15% 0 1.5%;
+    }
+
     input.main-input-text {
       font-family: "Roboto Slab", sans-serif;
       font-size: 3rem;
@@ -67,6 +71,26 @@ html {
       }
     }
 
+    .react-time-picker {
+      margin: 0 15px;
+      height: 100%;
+
+      .react-time-picker__wrapper {
+        padding: 3px 10px;
+        background-color: lighten(silver, 18%);
+        border: none;
+        border-radius: 8px;
+      }
+
+      .react-time-picker__clock.react-time-picker__clock--open {
+        display: none;
+      }
+
+      .react-time-picker__clock-button.react-time-picker__button {
+        display: none;
+      }
+    }
+
     button.next-button {
       font-family: "Roboto Slab", sans-serif;
       font-size: 2.5rem;
@@ -84,6 +108,16 @@ html {
       &:hover {
         background-color: lighten(green, 5%);
       }
+    }
+
+    div.errors {
+      font-size: 1.2rem;
+      background-color: lighten(@yourpink, 5%);
+      color: darken(@bittersweet, 10%);
+      width: fit-content;
+      padding: 10px;
+      border-radius: 8px;
+      margin: 0 auto;
     }
   }
 }

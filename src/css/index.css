@@ -141,13 +141,16 @@ html div.App {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 }
 body div.App h1,
 html div.App h1 {
   font-size: 2rem;
   font-weight: 600;
   margin-top: 50px;
+}
+body div.App div.container,
+html div.App div.container {
+  margin: 15% 0 1.5%;
 }
 body div.App input.main-input-text,
 html div.App input.main-input-text {
@@ -198,6 +201,26 @@ html div.App .react-date-picker .react-calendar__month-view__weekdays__weekday {
   font-size: 0.75rem;
   color: #5a5a5a;
 }
+body div.App .react-time-picker,
+html div.App .react-time-picker {
+  margin: 0 15px;
+  height: 100%;
+}
+body div.App .react-time-picker .react-time-picker__wrapper,
+html div.App .react-time-picker .react-time-picker__wrapper {
+  padding: 3px 10px;
+  background-color: #eeeeee;
+  border: none;
+  border-radius: 8px;
+}
+body div.App .react-time-picker .react-time-picker__clock.react-time-picker__clock--open,
+html div.App .react-time-picker .react-time-picker__clock.react-time-picker__clock--open {
+  display: none;
+}
+body div.App .react-time-picker .react-time-picker__clock-button.react-time-picker__button,
+html div.App .react-time-picker .react-time-picker__clock-button.react-time-picker__button {
+  display: none;
+}
 body div.App button.next-button,
 html div.App button.next-button {
   font-family: "Roboto Slab", sans-serif;
@@ -216,4 +239,14 @@ html div.App button.next-button {
 body div.App button.next-button:hover,
 html div.App button.next-button:hover {
   background-color: #009a00;
+}
+body div.App div.errors,
+html div.App div.errors {
+  font-size: 1.2rem;
+  background-color: #ffe4e4;
+  color: #ff3b3b;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 0 auto;
 }
